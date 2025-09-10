@@ -1,60 +1,96 @@
 * {
-            margin: 0;
-            padding: 0;
-        }
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            background-color: black;
-        }
+body {
+    background-color: black;
+    min-height: 100vh;  /* Add this */
+    display: flex;      /* Add this */
+    flex-direction: column;  /* Add this */
+}
 
-        .navbar {
-            min-height: 5vh;
-            background-color: blanchedalmond;
-            color: white ;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            font-family: "Poppins", sans-serif;
-            font-weight: 100;
-            font-style: normal;
-        }
+.navbar {
+    min-height: 5vh;
+    background-color: blanchedalmond;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
 
-        .navbar-list {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
+.navbar-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
 
-        .navbar-item {
-            color: black;
-            text-decoration: none;
-            font-size: 18px;
-            font-family: "Poppins", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-        }
+.navbar-item {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
 
-        .navbar-item:hover {
-            color: gold;
-        }
+.navbar-item:hover {
+    color: gold;
+}
 
-        .content-container {
-            background-image: url("./resources/bg.png");
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            background-attachment: fixed;
-            background-color: #cccccc;
-            min-height: 60vh;
-        }
+.landing-page{
+    min-height: 100vh;
+    align-items: center;
+    padding: 5rem 2rem;
+}
+.content-container {
+    background-image: url("./resources/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #cccccc;
+    min-height: 60vh;
+}
 
-        .quote{
-            color: white;
-            background-color: black;
-            font-family: "Poppins", sans-serif;
-            font-weight: 50;
-            font-style: normal;
-            justify-content: center;
-            text-align: center;
-            font-size: 68px;
-        }
+.quote {
+    color: white;
+    background-color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 50;
+    font-style: normal;
+    justify-content: center;
+    text-align: center;
+    font-size: 48px;
+}
+
+.footer {
+    min-height: 5vh;
+    background-color: blanchedalmond;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-top: auto;  
+    padding: 0 20px;
+}
+
+.categories-card{
+    border: black solid 1px;
+    margin: 25px;
+    justify-content: center;
+    color: blanchedalmond;
+    align-content: center;
+    
+}
+
+.categories-row{
+    display: flex;
+    background-color: black;
+}
