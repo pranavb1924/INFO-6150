@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nobel</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Smooth scrolling for anchor links */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Ensure sections within winners are visible */
-    #winners .category-section {
-      padding-top: 20px;
-      margin-bottom: 40px;
-    }
-  </style>
 </head>
 <body>
   <nav class="navbar">
-    <ul class="navbar-list">
-      <li><a href="#home" class="navbar-item">Home</a></li>
-      <li><a href="#about" class="navbar-item">About</a></li>
-      <li><a href="#winners" class="navbar-item">Winners</a></li>
-      <li><a href="#categories" class="navbar-item">Categories</a></li>
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#winners" class="nav-link">Winners</a></li>
+      <li><a href="#categories" class="nav-link">Categories</a></li>
+      <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
     </ul>
   </nav>
 
@@ -35,9 +24,11 @@
     <section id="about" class="page">
       <div class="container">
         <h1>About</h1>
-        <p class="history">Between 1901 and 2024, the Nobel Prizes and the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel were awarded 627 times to 1,012 people and organisations. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish inventor and entrepreneur. In 1968, Sveriges Riksbank established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, founder of the Nobel Prize. Each prize consists of a medal, a personal diploma, and a cash award.
-        A person or organisation awarded the Nobel Prize is called Nobel Prize laureate. The word "laureate" refers to being signified by the laurel wreath. In ancient Greece, laurel wreaths were awarded to victors as a sign of honour.</p>
-        <div class="video-container">
+        <p class="history">
+          Between 1901 and 2024, the Nobel Prizes and the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel were awarded 627 times to 1,012 people and organisations. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish inventor and entrepreneur. In 1968, Sveriges Riksbank established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, founder of the Nobel Prize. Each prize consists of a medal, a personal diploma, and a cash award.
+          A person or organisation awarded the Nobel Prize is called Nobel Prize laureate. The word "laureate" refers to being signified by the laurel wreath. In ancient Greece, laurel wreaths were awarded to victors as a sign of honour.
+        </p>
+        <div class="video-wrap">
           <video width="720" height="360" preload="metadata" poster="resources/thumbnail.jpg" autoplay muted controls>
             <source src="./resources/about.mp4" type="video/mp4">
             Sorry, your browser doesn't support HTML5 video.
@@ -49,9 +40,8 @@
     <section id="winners" class="page">
       <div class="container">
         <h1>Winners</h1>
-        
-        <!-- Physics Section -->
-        <div id="physics" class="category-section">
+
+        <div id="physics" class="category-block">
           <h2 class="category-title">Physics</h2>
           <table class="nobel-table">
             <thead>
@@ -133,8 +123,7 @@
           </table>
         </div>
 
-        <!-- Chemistry Section -->
-        <div id="chemistry" class="category-section">
+        <div id="chemistry" class="category-block">
           <h2 class="category-title">Chemistry</h2>
           <table class="nobel-table">
             <thead>
@@ -216,8 +205,7 @@
           </table>
         </div>
 
-        <!-- Medicine Section -->
-        <div id="medicine" class="category-section">
+        <div id="medicine" class="category-block">
           <h2 class="category-title">Physiology or Medicine</h2>
           <table class="nobel-table">
             <thead>
@@ -299,8 +287,7 @@
           </table>
         </div>
 
-        <!-- Peace Section -->
-        <div id="peace" class="category-section">
+        <div id="peace" class="category-block">
           <h2 class="category-title">Peace</h2>
           <table class="nobel-table">
             <thead>
@@ -382,8 +369,7 @@
           </table>
         </div>
 
-        <!-- Literature Section -->
-        <div id="literature" class="category-section">
+        <div id="literature" class="category-block">
           <h2 class="category-title">Literature</h2>
           <table class="nobel-table">
             <thead>
@@ -464,63 +450,82 @@
             </tbody>
           </table>
         </div>
-        
       </div>
     </section>
 
     <section id="categories" class="page">
-      <ul class="categories-row">
-        <li>
-          <a href="#winners" onclick="setTimeout(function(){document.getElementById('physics').scrollIntoView({behavior: 'smooth'});}, 100);">
-          <div class="categories-card">
-            <img src="./resources/physics.png" alt="Physics" class="cat-img">
-            <h3>PHYSICS</h3>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#winners" onclick="setTimeout(function(){document.getElementById('chemistry').scrollIntoView({behavior: 'smooth'});}, 100);">
-          <div class="categories-card">
-            <img src="./resources/chemistry.png" alt="Chemistry" class="cat-img">
-            <h3>CHEMISTRY</h3>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#winners" onclick="setTimeout(function(){document.getElementById('peace').scrollIntoView({behavior: 'smooth'});}, 100);">
-          <div class="categories-card">
-            <img src="./resources/peace.png" alt="Peace" class="cat-img">
-            <h3>PEACE</h3>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#winners" onclick="setTimeout(function(){document.getElementById('literature').scrollIntoView({behavior: 'smooth'});}, 100);">
-          <div class="categories-card">
-            <img src="./resources/literature.png" alt="Literature" class="cat-img">
-            <h3>LITERATURE</h3>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#winners" onclick="setTimeout(function(){document.getElementById('medicine').scrollIntoView({behavior: 'smooth'});}, 100);">
-          <div class="categories-card">
-            <img src="./resources/medicine.png" alt="Physiology or Medicine" class="cat-img">
-            <h3>MEDICINE</h3>
-          </div>
-          </a>
-        </li>
+      <ul class="categories-grid">
+        <li><a href="#physics" class="cat-card"><img src="./resources/physics.png" alt="Physics"><h3>PHYSICS</h3></a></li>
+        <li><a href="#chemistry" class="cat-card"><img src="./resources/chemistry.png" alt="Chemistry"><h3>CHEMISTRY</h3></a></li>
+        <li><a href="#peace" class="cat-card"><img src="./resources/peace.png" alt="Peace"><h3>PEACE</h3></a></li>
+        <li><a href="#literature" class="cat-card"><img src="./resources/literature.png" alt="Literature"><h3>LITERATURE</h3></a></li>
+        <li><a href="#medicine" class="cat-card"><img src="./resources/medicine.png" alt="Physiology or Medicine"><h3>MEDICINE</h3></a></li>
       </ul>
     </section>
 
-    <section id="home" class="page">
-      <div class="content-container"></div>
-      <aside>
-      <div class="quote">
-        <p>Nothing in life is to be feared, it is only to be understood<br>— Marie Curie</p>
-      </div>
-      </aside>
-    </section>
+  <!-- Drop-in replacement for your Newsletter section -->
+<section id="newsletter" class="page">
+  <div class="container">
+    <h1>Newsletter</h1>
+
+    <form class="newsletter-form"
+          action="mailto:newsletter@example.com?subject=Newsletter%20Sign-up"
+          method="post"
+          enctype="text/plain"
+          autocomplete="on">
+      <label for="first-name">First name</label>
+      <input id="first-name" name="First Name" type="text" placeholder="First name" required>
+
+      <label for="last-name">Last name</label>
+      <input id="last-name" name="Last Name" type="text" placeholder="Last name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="Email" type="email" placeholder="you@example.com" required>
+
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <h2>Featured articles</h2>
+    <div class="news-grid">
+      <article class="news-card">
+        <a href="https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/" target="_blank" rel="noopener">
+          <img src="./resources/news/physics-2023.jpg" alt="Attosecond pulses win the 2023 Physics Prize">
+          <h3>Physics 2023 — Attosecond pulses</h3>
+        </a>
+      </article>
+
+      <article class="news-card">
+        <a href="https://www.nobelprize.org/prizes/chemistry/2020/press-release/" target="_blank" rel="noopener">
+          <img src="./resources/news/chemistry-2020.jpg" alt="CRISPR genome editing awarded Chemistry 2020">
+          <h3>Chemistry 2020 — CRISPR</h3>
+        </a>
+      </article>
+
+      <article class="news-card">
+        <a href="https://www.nobelprize.org/prizes/medicine/2021/press-release/" target="_blank" rel="noopener">
+          <img src="./resources/news/medicine-2021.jpg" alt="Receptors for temperature and touch — Medicine 2021">
+          <h3>Medicine 2021 — Touch receptors</h3>
+        </a>
+      </article>
+
+      <article class="news-card">
+        <a href="https://www.nobelprize.org/prizes/literature/2016/dylan/facts/" target="_blank" rel="noopener">
+          <img src="./resources/news/literature-2016.jpg" alt="Bob Dylan awarded Literature 2016">
+          <h3>Literature 2016 — Bob Dylan</h3>
+        </a>
+      </article>
+
+      <article class="news-card">
+        <a href="https://www.nobelprize.org/prizes/peace/2021/press-release/" target="_blank" rel="noopener">
+          <img src="./resources/news/peace-2021.jpg" alt="Peace Prize 2021 for free expression">
+          <h3>Peace 2021 — Free expression</h3>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
   </main>
 
   <footer class="footer">

@@ -1,63 +1,74 @@
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root { --nav-h: 56px; --foot-h: 48px; }
 
 html, body { height: 100%; }
 body {
-  min-height: 100dvh;             
-  display: flex;
-  flex-direction: column;
   background: #000;
   color: blanchedalmond;
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-/* NAV */
 .navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
   background: blanchedalmond;
-  color: #000;
+  color: black;
+  min-height: var(--nav-h);
   display: flex;
   align-items: center;
   padding: 0 20px;
-  min-height: 56px;
-  position: sticky;  /* Add this */
-  top: 0;           /* Add this */
-  z-index: 1000;    /* Add this */
+  border-bottom: 1px solid blanchedalmond;
 }
-.navbar-list { display: flex; list-style: none; gap: 28px; }
-.navbar-item {
-  color: #000;
+.nav-list { display: flex; gap: 28px; list-style: none; }
+
+.nav-link {
+  color: black;
+  background: transparent;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 400;
   padding: 10px 6px;
-  border-radius: 8px;
-}
-.navbar-item:hover { color: goldenrod; }
-
-/* Highlight active tab with :has() (no JS) */
-body:not(:has(:target)) .navbar a[href="#home"],
-body:has(#about:target) .navbar a[href="#about"],
-body:has(#winners:target) .navbar a[href="#winners"],
-body:has(#categories:target) .navbar a[href="#categories"],
-body:has(#home:target) .navbar a[href="#home"] {
-  font-weight: 600;
-  border-bottom: 2px solid goldenrod;
+  display: inline-block;
 }
 
-/* LAYOUT: main grows; footer sticks to bottom */
-main { flex: 1 1 auto; }
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:focus-visible {
+  color: blanchedalmond;
+  background: black;
+}
 
-/* --- SECTION SWITCHING (CSS-only router) --- */
+
+.footer {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: blanchedalmond;
+  color: black;
+  min-height: var(--foot-h);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: center;
+  border-top: 1px solid blanchedalmond;
+}
+
+main {
+  padding-top: calc(var(--nav-h) + 8px);
+  padding-bottom: calc(var(--foot-h) + 8px);
+}
+
 .page { display: none; }
-/* Default view when no hash: show #home */
 #home { display: block; }
-/* When any section is targeted, show it */
 :target { display: block; }
-/* If any target exists, hide #home (must be last in DOM) */
 :target ~ #home { display: none; }
 
-/* HOME */
-.content-container {
+.page { scroll-margin-top: calc(var(--nav-h) + 12px); }
+.category-block { scroll-margin-top: calc(var(--nav-h) + 12px); }
+
+.container { padding: 32px 20px 48px; }
+.hero {
   background-image: url("./resources/bg.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -72,116 +83,109 @@ main { flex: 1 1 auto; }
   padding: 24px 16px 40px;
 }
 
-/* GENERIC SECTION CONTENT */
-.container { padding: 32px 20px 48px; }
-
-/* CATEGORIES */
-.categories-row {
+.categories-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 32px 20px 48px;
   justify-content: center;
-  align-items: stretch;
   list-style: none;
 }
-.categories-card {
+.cat-card {
+  display: block;
   border: 1px solid blanchedalmond;
-  border-radius: 16px;
   padding: 20px;
   width: 480px;
   text-align: center;
-  transition: transform 150ms ease;
+  text-decoration: none;
+  color: blanchedalmond;
 }
-.categories-card:hover { transform: translateY(-3px); }
-.cat-img {
+.cat-card img {
   width: 100px; height: 100px; object-fit: contain; display: block; margin: 0 auto 10px;
 }
 
-.footer {
-  background: blanchedalmond;
-  color: #000;
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  min-height: 48px;
-}
+.history { font-size: large; max-width: 80ch; margin: 0 auto 24px; }
 
-.winner-list, .winner-list-row{
-  border: 1px solid;
-  padding: 5px;
-}
-
-.history{
-  justify-content: center;
-  align-items: center;
-  font-size: large;
-}
-.video-container {
+.video-wrap {
   border: 1px solid blanchedalmond;
-  max-width: 720px;  /* Added 'px' unit */
-  margin: 20px auto;  /* Centers horizontally with auto margins */
+  max-width: 720px;
+  margin: 20px auto;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.video-container video {
+.video-wrap video {
   width: 100%;
   height: auto;
   max-width: 720px;
   display: block;
 }
 
-header{
-  background-color: blanchedalmond;
+.category-block { margin: 40px 0; }
+.category-title { color: blanchedalmond; margin-bottom: 15px; font-size: 1.5em; }
+
+.nobel-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
 }
+.nobel-table thead { background-color: #000; }
+.nobel-table th, .nobel-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 2px solid blanchedalmond;
+  color: blanchedalmond;
+}
+.nobel-table th { font-weight: 600; text-transform: uppercase; font-size: 0.9em; }
+
+#newsletter { color: blanchedalmond; }
+.newsletter-form { max-width: 520px; margin: 0 auto 24px; display: grid; gap: 12px; }
+.newsletter-form label { font-size: 14px; }
+.newsletter-form input,
+.newsletter-form button {
+  background: #000;
+  color: blanchedalmond;
+  border: 1px solid blanchedalmond;
+  padding: 10px 12px;
+  width: 100%;
+}
+.newsletter-form input::placeholder { color: blanchedalmond; opacity: .7; }
+.newsletter-form input:focus { outline: none; border-width: 2px; }
+.newsletter-form button { cursor: pointer; }
+
+.reads { list-style: disc; margin: 12px 0 0 18px; }
+.reads a { color: blanchedalmond; text-decoration: underline; }
 
 
-nobel-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-
-  .nobel-table thead {
-    background-color: #000;
-  }
-
-  .nobel-table th,
-  .nobel-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border: 2px solid blanchedalmond;
-    color: blanchedalmond;
-  }
-
-  .nobel-table th {
-    font-weight: 600;
-    color: blanchedalmond;
-    text-transform: uppercase;
-    font-size: 0.9em;
-  }
-
-  .nobel-table td {
-    color: blanchedalmond;
-    line-height: 1.5;
-  }
-
-  .category-section {
-    margin: 40px 0;
-  }
-
-  .category-title {
-    color: blanchedalmond;
-    margin-bottom: 15px;
-    font-size: 1.5em;
-  }
-
-  h2{
-    color: blanchedalmond;
-  }
-
-
+/* Card-style article embeds (black bg, blanchedalmond borders/text) */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+.news-card {
+  background: #000;
+  border: 1px solid blanchedalmond;
+  overflow: hidden;
+}
+.news-card a {
+  display: block;
+  color: blanchedalmond;
+  text-decoration: none;
+}
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid blanchedalmond;
+}
+.news-card h3 {
+  margin: 0;
+  padding: 12px;
+  font-size: 1rem;
+  color: blanchedalmond;
+}
 
