@@ -8,9 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Ensure sections within winners are visible */
+    #winners .category-section {
+      padding-top: 20px;
+      margin-bottom: 40px;
+    }
+  </style>
 </head>
 <body>
-  <!-- NAV -->
   <nav class="navbar">
     <ul class="navbar-list">
       <li><a href="#home" class="navbar-item">Home</a></li>
@@ -20,67 +31,498 @@
     </ul>
   </nav>
 
-  <!-- MAIN: one section visible at a time -->
   <main>
     <section id="about" class="page">
       <div class="container">
         <h1>About</h1>
-        <p>Write something about the prize and its history here.</p>
+        <p class="history">Between 1901 and 2024, the Nobel Prizes and the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel were awarded 627 times to 1,012 people and organisations. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish inventor and entrepreneur. In 1968, Sveriges Riksbank established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel, founder of the Nobel Prize. Each prize consists of a medal, a personal diploma, and a cash award.
+        A person or organisation awarded the Nobel Prize is called Nobel Prize laureate. The word "laureate" refers to being signified by the laurel wreath. In ancient Greece, laurel wreaths were awarded to victors as a sign of honour.</p>
+        <div class="video-container">
+          <video width="720" height="360" preload="metadata" poster="resources/thumbnail.jpg" autoplay muted controls>
+            <source src="./resources/about.mp4" type="video/mp4">
+            Sorry, your browser doesn't support HTML5 video.
+          </video>
+        </div>
       </div>
     </section>
 
     <section id="winners" class="page">
       <div class="container">
         <h1>Winners</h1>
-        <p>Table or cards listing laureates by year/category.</p>
+        
+        <!-- Physics Section -->
+        <div id="physics" class="category-section">
+          <h2 class="category-title">Physics</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Geoffrey Hinton, John Hopfield</td>
+                <td>2024</td>
+                <td>Foundational discoveries in machine learning with artificial neural networks</td>
+                <td>Canada/UK, USA</td>
+              </tr>
+              <tr>
+                <td>Pierre Agostini, Ferenc Krausz, Anne L'Huillier</td>
+                <td>2023</td>
+                <td>Experimental methods generating attosecond pulses of light</td>
+                <td>USA, Germany, Sweden</td>
+              </tr>
+              <tr>
+                <td>Alain Aspect, John Clauser, Anton Zeilinger</td>
+                <td>2022</td>
+                <td>Experiments with entangled photons</td>
+                <td>France, USA, Austria</td>
+              </tr>
+              <tr>
+                <td>Syukuro Manabe, Klaus Hasselmann, Giorgio Parisi</td>
+                <td>2021</td>
+                <td>Physical modelling of Earth's climate</td>
+                <td>USA, Germany, Italy</td>
+              </tr>
+              <tr>
+                <td>Roger Penrose, Reinhard Genzel, Andrea Ghez</td>
+                <td>2020</td>
+                <td>Black hole formation and discovery</td>
+                <td>UK, Germany, USA</td>
+              </tr>
+              <tr>
+                <td>James Peebles, Michel Mayor, Didier Queloz</td>
+                <td>2019</td>
+                <td>Theoretical cosmology and exoplanet discovery</td>
+                <td>Canada/USA, Switzerland</td>
+              </tr>
+              <tr>
+                <td>Arthur Ashkin, Gérard Mourou, Donna Strickland</td>
+                <td>2018</td>
+                <td>Optical tweezers and chirped pulse amplification</td>
+                <td>USA, France, Canada</td>
+              </tr>
+              <tr>
+                <td>Rainer Weiss, Barry Barish, Kip Thorne</td>
+                <td>2017</td>
+                <td>LIGO detector and gravitational waves</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>David Thouless, Duncan Haldane, Michael Kosterlitz</td>
+                <td>2016</td>
+                <td>Topological phase transitions</td>
+                <td>UK, UK/USA, UK/USA</td>
+              </tr>
+              <tr>
+                <td>Takaaki Kajita, Arthur McDonald</td>
+                <td>2015</td>
+                <td>Discovery of neutrino oscillations</td>
+                <td>Japan, Canada</td>
+              </tr>
+              <tr>
+                <td>Isamu Akasaki, Hiroshi Amano, Shuji Nakamura</td>
+                <td>2014</td>
+                <td>Invention of blue light-emitting diodes</td>
+                <td>Japan, Japan, USA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chemistry Section -->
+        <div id="chemistry" class="category-section">
+          <h2 class="category-title">Chemistry</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>David Baker, Demis Hassabis, John Jumper</td>
+                <td>2024</td>
+                <td>Computational protein design and structure prediction</td>
+                <td>USA, UK</td>
+              </tr>
+              <tr>
+                <td>Moungi Bawendi, Louis Brus, Alexei Ekimov</td>
+                <td>2023</td>
+                <td>Discovery and synthesis of quantum dots</td>
+                <td>USA, USA, Russia</td>
+              </tr>
+              <tr>
+                <td>Carolyn Bertozzi, Morten Meldal, Barry Sharpless</td>
+                <td>2022</td>
+                <td>Click chemistry and bioorthogonal chemistry</td>
+                <td>USA, Denmark, USA</td>
+              </tr>
+              <tr>
+                <td>Benjamin List, David MacMillan</td>
+                <td>2021</td>
+                <td>Development of asymmetric organocatalysis</td>
+                <td>Germany, UK/USA</td>
+              </tr>
+              <tr>
+                <td>Emmanuelle Charpentier, Jennifer Doudna</td>
+                <td>2020</td>
+                <td>Development of CRISPR-Cas9 gene editing</td>
+                <td>France, USA</td>
+              </tr>
+              <tr>
+                <td>John Goodenough, Stanley Whittingham, Akira Yoshino</td>
+                <td>2019</td>
+                <td>Development of lithium-ion batteries</td>
+                <td>USA, UK/USA, Japan</td>
+              </tr>
+              <tr>
+                <td>Frances Arnold, George Smith, Gregory Winter</td>
+                <td>2018</td>
+                <td>Directed evolution of enzymes and phage display</td>
+                <td>USA, USA, UK</td>
+              </tr>
+              <tr>
+                <td>Jacques Dubochet, Joachim Frank, Richard Henderson</td>
+                <td>2017</td>
+                <td>Cryo-electron microscopy</td>
+                <td>Switzerland, USA, UK</td>
+              </tr>
+              <tr>
+                <td>Jean-Pierre Sauvage, Fraser Stoddart, Ben Feringa</td>
+                <td>2016</td>
+                <td>Design and synthesis of molecular machines</td>
+                <td>France, UK/USA, Netherlands</td>
+              </tr>
+              <tr>
+                <td>Tomas Lindahl, Paul Modrich, Aziz Sancar</td>
+                <td>2015</td>
+                <td>Mechanistic studies of DNA repair</td>
+                <td>Sweden, USA, Turkey/USA</td>
+              </tr>
+              <tr>
+                <td>Eric Betzig, Stefan Hell, William Moerner</td>
+                <td>2014</td>
+                <td>Super-resolved fluorescence microscopy</td>
+                <td>USA, Germany, USA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Medicine Section -->
+        <div id="medicine" class="category-section">
+          <h2 class="category-title">Physiology or Medicine</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Victor Ambros, Gary Ruvkun</td>
+                <td>2024</td>
+                <td>Discovery of microRNA and gene regulation</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Katalin Karikó, Drew Weissman</td>
+                <td>2023</td>
+                <td>mRNA vaccine development</td>
+                <td>Hungary/USA, USA</td>
+              </tr>
+              <tr>
+                <td>Svante Pääbo</td>
+                <td>2022</td>
+                <td>Discoveries concerning genomes of extinct hominins</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>David Julius, Ardem Patapoutian</td>
+                <td>2021</td>
+                <td>Discoveries of receptors for temperature and touch</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Harvey Alter, Michael Houghton, Charles Rice</td>
+                <td>2020</td>
+                <td>Discovery of Hepatitis C virus</td>
+                <td>USA, UK, USA</td>
+              </tr>
+              <tr>
+                <td>William Kaelin Jr., Peter Ratcliffe, Gregg Semenza</td>
+                <td>2019</td>
+                <td>Discovery of how cells sense oxygen</td>
+                <td>USA, UK, USA</td>
+              </tr>
+              <tr>
+                <td>James Allison, Tasuku Honjo</td>
+                <td>2018</td>
+                <td>Cancer therapy by inhibition of negative immune regulation</td>
+                <td>USA, Japan</td>
+              </tr>
+              <tr>
+                <td>Jeffrey Hall, Michael Rosbash, Michael Young</td>
+                <td>2017</td>
+                <td>Discoveries of molecular mechanisms controlling circadian rhythm</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Yoshinori Ohsumi</td>
+                <td>2016</td>
+                <td>Discoveries of mechanisms for autophagy</td>
+                <td>Japan</td>
+              </tr>
+              <tr>
+                <td>William Campbell, Satoshi Ōmura, Youyou Tu</td>
+                <td>2015</td>
+                <td>Therapies against parasitic diseases</td>
+                <td>Ireland/USA, Japan, China</td>
+              </tr>
+              <tr>
+                <td>John O'Keefe, May-Britt Moser, Edvard Moser</td>
+                <td>2014</td>
+                <td>Discovery of cells that constitute positioning system in brain</td>
+                <td>USA/UK, Norway</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Peace Section -->
+        <div id="peace" class="category-section">
+          <h2 class="category-title">Peace</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nihon Hidankyo</td>
+                <td>2024</td>
+                <td>Efforts to achieve a world free of nuclear weapons</td>
+                <td>Japan</td>
+              </tr>
+              <tr>
+                <td>Narges Mohammadi</td>
+                <td>2023</td>
+                <td>Fight against oppression of women in Iran</td>
+                <td>Iran</td>
+              </tr>
+              <tr>
+                <td>Ales Bialiatski, Memorial, Center for Civil Liberties</td>
+                <td>2022</td>
+                <td>Documenting war crimes and human rights abuses</td>
+                <td>Belarus, Russia, Ukraine</td>
+              </tr>
+              <tr>
+                <td>Maria Ressa, Dmitry Muratov</td>
+                <td>2021</td>
+                <td>Efforts to safeguard freedom of expression</td>
+                <td>Philippines, Russia</td>
+              </tr>
+              <tr>
+                <td>World Food Programme</td>
+                <td>2020</td>
+                <td>Efforts to combat hunger</td>
+                <td>UN Organization</td>
+              </tr>
+              <tr>
+                <td>Abiy Ahmed</td>
+                <td>2019</td>
+                <td>Peace and international cooperation</td>
+                <td>Ethiopia</td>
+              </tr>
+              <tr>
+                <td>Denis Mukwege, Nadia Murad</td>
+                <td>2018</td>
+                <td>Efforts to end sexual violence as weapon of war</td>
+                <td>DR Congo, Iraq</td>
+              </tr>
+              <tr>
+                <td>ICAN</td>
+                <td>2017</td>
+                <td>Work to ban nuclear weapons</td>
+                <td>International</td>
+              </tr>
+              <tr>
+                <td>Juan Manuel Santos</td>
+                <td>2016</td>
+                <td>Efforts to end Colombia's civil war</td>
+                <td>Colombia</td>
+              </tr>
+              <tr>
+                <td>National Dialogue Quartet</td>
+                <td>2015</td>
+                <td>Building democracy in Tunisia</td>
+                <td>Tunisia</td>
+              </tr>
+              <tr>
+                <td>Kailash Satyarthi, Malala Yousafzai</td>
+                <td>2014</td>
+                <td>Struggle against suppression of children</td>
+                <td>India, Pakistan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Literature Section -->
+        <div id="literature" class="category-section">
+          <h2 class="category-title">Literature</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Han Kang</td>
+                <td>2024</td>
+                <td>Intense poetic prose confronting historical traumas</td>
+                <td>South Korea</td>
+              </tr>
+              <tr>
+                <td>Jon Fosse</td>
+                <td>2023</td>
+                <td>Innovative plays and prose giving voice to the unsayable</td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>Annie Ernaux</td>
+                <td>2022</td>
+                <td>Courage and clinical acuity in uncovering personal memory</td>
+                <td>France</td>
+              </tr>
+              <tr>
+                <td>Abdulrazak Gurnah</td>
+                <td>2021</td>
+                <td>Uncompromising penetration of effects of colonialism</td>
+                <td>Tanzania/UK</td>
+              </tr>
+              <tr>
+                <td>Louise Glück</td>
+                <td>2020</td>
+                <td>Unmistakable poetic voice with austere beauty</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Peter Handke</td>
+                <td>2019</td>
+                <td>Influential work exploring periphery of human experience</td>
+                <td>Austria</td>
+              </tr>
+              <tr>
+                <td>Olga Tokarczuk</td>
+                <td>2018</td>
+                <td>Narrative imagination with encyclopedic passion</td>
+                <td>Poland</td>
+              </tr>
+              <tr>
+                <td>Kazuo Ishiguro</td>
+                <td>2017</td>
+                <td>Novels of great emotional force</td>
+                <td>UK</td>
+              </tr>
+              <tr>
+                <td>Bob Dylan</td>
+                <td>2016</td>
+                <td>Creating new poetic expressions within American song tradition</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Svetlana Alexievich</td>
+                <td>2015</td>
+                <td>Polyphonic writings, monument to suffering and courage</td>
+                <td>Belarus</td>
+              </tr>
+              <tr>
+                <td>Patrick Modiano</td>
+                <td>2014</td>
+                <td>Art of memory evoking human destinies</td>
+                <td>France</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
       </div>
     </section>
 
     <section id="categories" class="page">
       <ul class="categories-row">
         <li>
+          <a href="#winners" onclick="setTimeout(function(){document.getElementById('physics').scrollIntoView({behavior: 'smooth'});}, 100);">
           <div class="categories-card">
             <img src="./resources/physics.png" alt="Physics" class="cat-img">
             <h3>PHYSICS</h3>
           </div>
+          </a>
         </li>
         <li>
+          <a href="#winners" onclick="setTimeout(function(){document.getElementById('chemistry').scrollIntoView({behavior: 'smooth'});}, 100);">
           <div class="categories-card">
             <img src="./resources/chemistry.png" alt="Chemistry" class="cat-img">
             <h3>CHEMISTRY</h3>
           </div>
+          </a>
         </li>
         <li>
+          <a href="#winners" onclick="setTimeout(function(){document.getElementById('peace').scrollIntoView({behavior: 'smooth'});}, 100);">
           <div class="categories-card">
             <img src="./resources/peace.png" alt="Peace" class="cat-img">
             <h3>PEACE</h3>
           </div>
+          </a>
         </li>
         <li>
+          <a href="#winners" onclick="setTimeout(function(){document.getElementById('literature').scrollIntoView({behavior: 'smooth'});}, 100);">
           <div class="categories-card">
             <img src="./resources/literature.png" alt="Literature" class="cat-img">
             <h3>LITERATURE</h3>
           </div>
+          </a>
         </li>
         <li>
+          <a href="#winners" onclick="setTimeout(function(){document.getElementById('medicine').scrollIntoView({behavior: 'smooth'});}, 100);">
           <div class="categories-card">
             <img src="./resources/medicine.png" alt="Physiology or Medicine" class="cat-img">
             <h3>MEDICINE</h3>
           </div>
+          </a>
         </li>
       </ul>
     </section>
 
-    <!-- HOME LAST (default view) -->
     <section id="home" class="page">
       <div class="content-container"></div>
+      <aside>
       <div class="quote">
         <p>Nothing in life is to be feared, it is only to be understood<br>— Marie Curie</p>
       </div>
+      </aside>
     </section>
   </main>
 
-  <!-- FOOTER (anchored) -->
   <footer class="footer">
     <p>&copy; 2025 All Rights Reserved</p>
   </footer>

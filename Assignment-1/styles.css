@@ -1,4 +1,4 @@
-/* RESET / BASE */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body { height: 100%; }
@@ -19,6 +19,9 @@ body {
   align-items: center;
   padding: 0 20px;
   min-height: 56px;
+  position: sticky;  /* Add this */
+  top: 0;           /* Add this */
+  z-index: 1000;    /* Add this */
 }
 .navbar-list { display: flex; list-style: none; gap: 28px; }
 .navbar-item {
@@ -58,7 +61,7 @@ main { flex: 1 1 auto; }
   background-image: url("./resources/bg.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   min-height: 65vh;
 }
 .quote {
@@ -103,3 +106,82 @@ main { flex: 1 1 auto; }
   padding: 10px 20px;
   min-height: 48px;
 }
+
+.winner-list, .winner-list-row{
+  border: 1px solid;
+  padding: 5px;
+}
+
+.history{
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+.video-container {
+  border: 1px solid blanchedalmond;
+  max-width: 720px;  /* Added 'px' unit */
+  margin: 20px auto;  /* Centers horizontally with auto margins */
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  max-width: 720px;
+  display: block;
+}
+
+header{
+  background-color: blanchedalmond;
+}
+
+
+nobel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  .nobel-table thead {
+    background-color: #000;
+  }
+
+  .nobel-table th,
+  .nobel-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 2px solid blanchedalmond;
+    color: blanchedalmond;
+  }
+
+  .nobel-table th {
+    font-weight: 600;
+    color: blanchedalmond;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+
+  .nobel-table td {
+    color: blanchedalmond;
+    line-height: 1.5;
+  }
+
+  .category-section {
+    margin: 40px 0;
+  }
+
+  .category-title {
+    color: blanchedalmond;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+
+  h2{
+    color: blanchedalmond;
+  }
+
+
+
