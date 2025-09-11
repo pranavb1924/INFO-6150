@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nobel</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <ul class="navbar-list">
-            <li><a href="#" class="navbar-item">Home</a></li>
-            <li><a href="#" class="navbar-item">About</a></li>
-            <li><a href="#" class="navbar-item">Winners</a></li>
-            <li><a href="#" class="navbar-item">Categories</a></li>
-        </ul>
-    </div>
-    <section class="landing-page">
-    <div class="content-container">
-    </div>
-    <div class="quote">
-        <p>Nothing in life is to be feared, it is only to be understood<br>
-        - Marie Curie</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2025 All Rights Reserved</p>
-    </div>
-</section>
+  <!-- NAV -->
+  <nav class="navbar">
+    <ul class="navbar-list">
+      <li><a href="#home" class="navbar-item">Home</a></li>
+      <li><a href="#about" class="navbar-item">About</a></li>
+      <li><a href="#winners" class="navbar-item">Winners</a></li>
+      <li><a href="#categories" class="navbar-item">Categories</a></li>
+    </ul>
+  </nav>
 
-    <section class="Categories">
-    <ul class="categories-row">
-        <li>
-            <div class="categories-card">
-            <img src="./resources/physics.png" alt="" style="width: 100px; height: 100px;">
-            <h3>PHYSICS</h3>
-            </div>
-        </li>
-        <li>
-            <a href="#">
-            <div class="categories-card">
-            <img src="./resources/chemistry.png" alt="" style="align-content: center; width: 100px; height: 100px;">
-            <h3>CHEMISTRY</h3>
-            </div>
-            </a>
-        </li>
-                <li>
-            <a href="#">
-            <div class="categories-card">
-            <img src="./resources/peace.png" alt="" style="align-content: center; width: 100px; height: 100px;">
-            <h3>CHEMISTRY</h3>
-            </div>
-            </a>
-        </li>
-                <li>
-            <div class="categories-card">
-            <img src="./resources/literature.png" alt="" style="width: 100px; height: 100px;">
-            <h3>PHYSICS</h3>
-            </div>
-        </li>
-        <li>
-            <a href="#">
-            <div class="categories-card">
-            <img src="./resources/medicine.png" alt="" style="align-content: center; width: 100px; height: 100px;">
-            <h3>CHEMISTRY</h3>
-            </div>
-            </a>
-        </li>
-</ul>
+  <!-- MAIN: one section visible at a time -->
+  <main>
+    <section id="about" class="page">
+      <div class="container">
+        <h1>About</h1>
+        <p>Write something about the prize and its history here.</p>
+      </div>
     </section>
+
+    <section id="winners" class="page">
+      <div class="container">
+        <h1>Winners</h1>
+        <p>Table or cards listing laureates by year/category.</p>
+      </div>
+    </section>
+
+    <section id="categories" class="page">
+      <ul class="categories-row">
+        <li>
+          <div class="categories-card">
+            <img src="./resources/physics.png" alt="Physics" class="cat-img">
+            <h3>PHYSICS</h3>
+          </div>
+        </li>
+        <li>
+          <div class="categories-card">
+            <img src="./resources/chemistry.png" alt="Chemistry" class="cat-img">
+            <h3>CHEMISTRY</h3>
+          </div>
+        </li>
+        <li>
+          <div class="categories-card">
+            <img src="./resources/peace.png" alt="Peace" class="cat-img">
+            <h3>PEACE</h3>
+          </div>
+        </li>
+        <li>
+          <div class="categories-card">
+            <img src="./resources/literature.png" alt="Literature" class="cat-img">
+            <h3>LITERATURE</h3>
+          </div>
+        </li>
+        <li>
+          <div class="categories-card">
+            <img src="./resources/medicine.png" alt="Physiology or Medicine" class="cat-img">
+            <h3>MEDICINE</h3>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- HOME LAST (default view) -->
+    <section id="home" class="page">
+      <div class="content-container"></div>
+      <div class="quote">
+        <p>Nothing in life is to be feared, it is only to be understood<br>— Marie Curie</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (anchored) -->
+  <footer class="footer">
+    <p>&copy; 2025 All Rights Reserved</p>
+  </footer>
 </body>
 </html>
