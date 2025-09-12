@@ -32,6 +32,10 @@ body {
   display: inline-block;
 }
 
+.newsletter-form button:hover{
+  color: #000;
+  background-color: blanchedalmond;
+}
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:focus-visible {
@@ -163,7 +167,8 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 8px;
+
 }
 .news-card {
   background: #000;
@@ -177,7 +182,7 @@ main {
 }
 .news-card img {
   width: 100%;
-  height: 160px;
+  height: 80%;
   object-fit: cover;
   display: block;
   border-bottom: 1px solid blanchedalmond;
@@ -187,5 +192,9 @@ main {
   padding: 12px;
   font-size: 1rem;
   color: blanchedalmond;
+}
+
+#newsletter{
+  padding: 0%;
 }
 
