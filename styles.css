@@ -8,7 +8,6 @@
   --nav-h: 56px;
   --foot-h: 48px;
 }
-
 html,
 body {
   height: 100%;
@@ -16,11 +15,14 @@ body {
 body {
   background: #000;
   color: blanchedalmond;
-  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+  font-family: "Poppins", system-ui, -apple-system, Sego e UI, Roboto, Arial,
     sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
-/* Header + Navbar */
+/* Header + navbar */
 .site-header {
   position: fixed;
   top: 0;
@@ -45,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 20px 8px;
+  border-top: 5px solid #000;
 }
 .nav-list {
   display: flex;
@@ -53,7 +56,6 @@ body {
 }
 .nav-link {
   color: #000;
-  text-decoration: none;
   font-size: 18px;
   padding: 10px 6px;
   display: inline-block;
@@ -86,35 +88,30 @@ body {
   text-decoration: underline;
 }
 
+/* Layout */
 main {
   padding-top: calc(var(--nav-h) + 20px);
   padding-bottom: calc(var(--foot-h) + 8px);
 }
-
 .page {
   display: none;
   min-height: calc(100vh - (var(--nav-h) + var(--foot-h) + 28px));
+  scroll-margin-top: calc(var(--nav-h) + 12px);
 }
 .page:target {
   display: block;
 }
-
 #home {
   display: block;
 }
-
 .page:target ~ #home {
   display: none;
 }
-
-.page {
-  scroll-margin-top: calc(var(--nav-h) + 12px);
-}
-
 .container {
   padding: 32px 20px 48px;
 }
 
+/* Home hero */
 .hero {
   background-image: url("./resources/bg.png");
   background-repeat: no-repeat;
@@ -130,17 +127,18 @@ main {
   padding: 24px 16px 40px;
 }
 
+/* Figure */
 .figure {
   margin: 16px auto 24px;
-  min-width: 360px;
+  max-width: 720px;
+  width: 100%;
   text-align: center;
   border: 1px solid blanchedalmond;
   padding: 8px;
-  margin-top: 100px;
 }
 .figure img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 .figure figcaption {
@@ -149,8 +147,8 @@ main {
   padding-top: 6px;
 }
 
-.video-wrap,
-.audio-wrap {
+/* Video */
+.video-wrap {
   border: 1px solid blanchedalmond;
   max-width: 720px;
   margin: 20px auto;
@@ -165,10 +163,8 @@ main {
   max-width: 720px;
   display: block;
 }
-.audio-wrap audio {
-  width: 100%;
-}
 
+/* FAQ */
 .faq {
   margin: 10px auto 0;
   max-width: 720px;
@@ -183,16 +179,94 @@ main {
   margin-top: 8px;
 }
 
-/* Quick links inside winners hub */
+/* —— Newspaper look for Winners —— */
+.winners-masthead {
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid blanchedalmond;
+}
+.definition-card {
+  border: 1px solid blanchedalmond;
+  padding: 12px 14px;
+  margin: 10px 0 18px;
+  background: #000;
+}
+.kicker {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  margin: 0 0 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid blanchedalmond;
+}
+.prose {
+  text-align: justify;
+  line-height: 1.6;
+}
+.prose p:first-child::first-letter {
+  font-size: 2.2rem;
+  font-weight: 600;
+  float: left;
+  line-height: 1;
+  margin: 0.05em 0.18em 0 0;
+}
+
+/* Grid of bordered story cards */
+.newsboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 6px 0 18px;
+}
+.story-card {
+  border: 1px solid blanchedalmond;
+  padding: 12px 14px;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+.story-head {
+  margin: 0;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid blanchedalmond;
+  padding-bottom: 6px;
+}
+.story-meta {
+  margin: 6px 0 8px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+.story-body {
+  text-align: justify;
+  line-height: 1.55;
+}
+.story-body p + p {
+  margin-top: 8px;
+}
+
+/* Section subtitle + quick links */
+.winners-subtitle {
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+}
 .quick-links {
-  list-style: disc;
-  margin: 8px 0 0 20px;
+  list-style: none;
+  padding: 8px 0 0;
+  margin: 0;
+  border-top: 1px solid blanchedalmond;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 .quick-links a {
   color: blanchedalmond;
+  text-decoration: underline;
 }
 
-/* Winners tables */
+/* Tables */
 .nobel-table {
   width: 100%;
   border-collapse: collapse;
@@ -214,7 +288,7 @@ main {
   font-size: 0.9em;
 }
 
-/* Categories grid */
+/* Categories */
 .categories-grid {
   display: flex;
   flex-wrap: wrap;
@@ -229,7 +303,6 @@ main {
   padding: 20px;
   width: 480px;
   text-align: center;
-  text-decoration: none;
   color: blanchedalmond;
 }
 .cat-card img {
@@ -273,8 +346,6 @@ main {
   color: #000;
   background-color: blanchedalmond;
 }
-
-/* Datalist input styling (popup itself is UA-controlled) */
 .sr-only {
   position: absolute !important;
   width: 1px;
@@ -291,7 +362,7 @@ main {
   padding-right: 36px;
 }
 
-/* News cards — compact */
+/* News cards */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
