@@ -1,397 +1,860 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nobel</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nobel</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="./resources/favicon.png" type="image/png"/>
+    <!-- Favicon -->
+    <link rel="icon" href="./resources/favicon.png" type="image/png" />
 
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./resources/bg.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./resources/bg.png" />
+  </head>
+  <body>
+    <!-- HEADER (semantic) -->
+    <header class="site-header">
+      <h1 class="logo"><a href="#home" class="logo-link">Nobel</a></h1>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#winners" class="nav-link">Winners</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
+        </ul>
+      </nav>
+    </header>
 
-</head>
-<body>
+    <main>
+      <section id="about" class="page">
+        <div class="container">
+          <h2>About</h2>
 
-  <!-- HEADER (semantic) -->
-  <header class="site-header">
-    <h1 class="logo"><a href="#home" class="logo-link">Nobel</a></h1>
-    <nav class="navbar">
-      <ul class="nav-list">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#winners" class="nav-link">Winners</a></li>
-        <li><a href="#categories" class="nav-link">Categories</a></li>
-        <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="about" class="page">
-      <div class="container">
-        <h2>About</h2>
-
-        <p class="history">
-          Between 1901 and 2024, the Nobel Prizes and the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel were awarded 627 times to 1,012 people and organisations. The Nobel Prize is an international award administered by the Nobel Foundation in Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish inventor and entrepreneur. In 1968, Sveriges Riksbank established the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel. Each prize consists of a medal, a personal diploma, and a cash award.
-        </p>
-                <details class="faq">
-          <summary>Who decides the Nobel Prizes?</summary>
-          <p>Independent committees and academies select laureates based on nominations and rigorous evaluation.</p>
-        </details>
-        <div class="video-wrap">
-          <video width="720" height="360" preload="metadata" poster="resources/thumbnail.jpg" autoplay muted controls>
-            <source src="./resources/about.mp4" type="video/mp4">
-            Sorry, your browser doesn't support HTML5 video.
-          </video>
+          <p class="history">
+            Between 1901 and 2024, the Nobel Prizes and the Sveriges Riksbank
+            Prize in Economic Sciences in Memory of Alfred Nobel were awarded
+            627 times to 1,012 people and organisations. The Nobel Prize is an
+            international award administered by the Nobel Foundation in
+            Stockholm, Sweden, and based on the fortune of Alfred Nobel, Swedish
+            inventor and entrepreneur. In 1968, Sveriges Riksbank established
+            the Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred
+            Nobel. Each prize consists of a medal, a personal diploma, and a
+            cash award.
+          </p>
+          <details class="faq">
+            <summary>Who decides the Nobel Prizes?</summary>
+            <p>
+              Independent committees and academies select laureates based on
+              nominations and rigorous evaluation.
+            </p>
+          </details>
+          <div class="video-wrap">
+            <video
+              width="720"
+              height="360"
+              preload="metadata"
+              poster="resources/thumbnail.jpg"
+              autoplay
+              muted
+              controls
+            >
+              <source src="./resources/about.mp4" type="video/mp4" />
+              Sorry, your browser doesn't support HTML5 video.
+            </video>
+          </div>
+          <figure class="figure">
+            <img src="./resources/will.png" alt="Nobel Prize medal" />
+            <figcaption>First Paragraph of Alfred Nobel's Will</figcaption>
+          </figure>
         </div>
-        <figure class="figure">
-          <img src="./resources/will.png" alt="Nobel Prize medal">
-          <figcaption>First Paragraph of Alfred Nobel's Will</figcaption>
-        </figure>
-      </div>
-    </section>
-    <section id="winners" class="page">
-  <div class="container">
-    <h2 class="winners-masthead">Winners</h2>
+      </section>
+      <section id="winners" class="page">
+        <div class="container">
+          <h2 class="winners-masthead">Winners</h2>
 
-    <!-- Definition / lead article -->
-    <article class="definition-card">
-      <h3 class="kicker">What is a Nobel laureate?</h3>
-      <div class="prose">
-        <p>
-          A <strong>Nobel laureate</strong> is a person or organization awarded a Nobel Prize for work that
-          “has conferred the greatest benefit to humankind.” The term <em>laureate</em> comes from the laurel wreath
-          used to crown victors in ancient Greece. Since 1901, prizes have been awarded in Physics, Chemistry,
-          Physiology or Medicine, Literature, and Peace; in 1968 the Prize in Economic Sciences was added in
-          Alfred Nobel’s memory.
-        </p>
-      </div>
-    </article>
-
-    <!-- Newspaper grid of mini-stories -->
-    <section class="newsboard">
-      <article class="story-card">
-        <h4 class="story-head">Albert Einstein</h4>
-        <p class="story-meta">Physics — 1921 (photoelectric effect)</p>
-        <div class="story-body">
-          <p>Explained how light can knock electrons free from metal—evidence that light acts like particles.
-            The work powered quantum theory, even as his fame soared for relativity.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">Nelson Mandela</h4>
-        <p class="story-meta">Peace — 1993 (with F. W. de Klerk)</p>
-        <div class="story-body">
-          <p>After 27 years in prison, he negotiated an end to apartheid and became South Africa’s first
-            democratically elected president, centering reconciliation over revenge.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">Mother Teresa</h4>
-        <p class="story-meta">Peace — 1979</p>
-        <div class="story-body">
-          <p>Founded the Missionaries of Charity and devoted her life to serving the poor and the dying, inspiring
-            global volunteerism and a network of care homes.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">Marie Curie</h4>
-        <p class="story-meta">Physics — 1903 • Chemistry — 1911</p>
-        <div class="story-body">
-          <p>First woman to win a Nobel and the only person to win in two sciences—
-            radioactivity pioneer who also organized mobile X-ray units in WWI.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">Linus Pauling</h4>
-        <p class="story-meta">Chemistry — 1954 • Peace — 1962 (unshared)</p>
-        <div class="story-body">
-          <p>Revealed the nature of the chemical bond, then led a global campaign against nuclear testing—one of
-            only two people with two unshared Nobels.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">John Bardeen</h4>
-        <p class="story-meta">Physics — 1956 • 1972</p>
-        <div class="story-body">
-          <p>Co-invented the transistor and later co-created BCS theory of superconductivity—the only two-time
-            Physics laureate, shaping the electronics era.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">Frederick Sanger</h4>
-        <p class="story-meta">Chemistry — 1958 • 1980</p>
-        <div class="story-body">
-          <p>Determined insulin’s structure and developed DNA sequencing methods—cornerstones of modern genomics.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">ICRC</h4>
-        <p class="story-meta">Peace — 1917 • 1944 • 1963</p>
-        <div class="story-body">
-          <p>The International Committee of the Red Cross was recognized three times for humanitarian work during
-            and after wars—aid under the harshest conditions.</p>
-        </div>
-      </article>
-
-      <article class="story-card">
-        <h4 class="story-head">UNHCR</h4>
-        <p class="story-meta">Peace — 1954 • 1981</p>
-        <div class="story-body">
-          <p>The UN refugee agency received two Peace Prizes for protecting and resettling displaced people
-            worldwide across decades of crises.</p>
-        </div>
-      </article>
-    </section>
-
-    <h3 class="winners-subtitle">Explore winners by category</h3>
-    <ul class="quick-links">
-      <li><a href="#winners-physics">Physics</a></li>
-      <li><a href="#winners-chemistry">Chemistry</a></li>
-      <li><a href="#winners-medicine">Physiology or Medicine</a></li>
-      <li><a href="#winners-peace">Peace</a></li>
-      <li><a href="#winners-literature">Literature</a></li>
-    </ul>
-  </div>
-</section>
-
-    <section id="winners-physics" class="page">
-      <div class="container">
-        <h2>Physics — Nobel Laureates</h2>
-        <table class="nobel-table">
-          <thead>
-            <tr>
-              <th>Name</th><th>Year</th><th>Contribution</th><th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Geoffrey Hinton, John Hopfield</td><td>2024</td><td>Foundational discoveries in machine learning with artificial neural networks</td><td>Canada/UK, USA</td></tr>
-            <tr><td>Pierre Agostini, Ferenc Krausz, Anne L'Huillier</td><td>2023</td><td>Experimental methods generating attosecond pulses of light</td><td>USA, Germany, Sweden</td></tr>
-            <tr><td>Alain Aspect, John Clauser, Anton Zeilinger</td><td>2022</td><td>Experiments with entangled photons</td><td>France, USA, Austria</td></tr>
-            <tr><td>Syukuro Manabe, Klaus Hasselmann, Giorgio Parisi</td><td>2021</td><td>Physical modelling of Earth's climate</td><td>USA, Germany, Italy</td></tr>
-            <tr><td>Roger Penrose, Reinhard Genzel, Andrea Ghez</td><td>2020</td><td>Black hole formation and discovery</td><td>UK, Germany, USA</td></tr>
-            <tr><td>James Peebles, Michel Mayor, Didier Queloz</td><td>2019</td><td>Theoretical cosmology and exoplanet discovery</td><td>Canada/USA, Switzerland</td></tr>
-            <tr><td>Arthur Ashkin, Gérard Mourou, Donna Strickland</td><td>2018</td><td>Optical tweezers and chirped pulse amplification</td><td>USA, France, Canada</td></tr>
-            <tr><td>Rainer Weiss, Barry Barish, Kip Thorne</td><td>2017</td><td>LIGO detector and gravitational waves</td><td>USA</td></tr>
-            <tr><td>David Thouless, Duncan Haldane, Michael Kosterlitz</td><td>2016</td><td>Topological phase transitions</td><td>UK, UK/USA, UK/USA</td></tr>
-            <tr><td>Takaaki Kajita, Arthur McDonald</td><td>2015</td><td>Discovery of neutrino oscillations</td><td>Japan, Canada</td></tr>
-            <tr><td>Isamu Akasaki, Hiroshi Amano, Shuji Nakamura</td><td>2014</td><td>Invention of blue light-emitting diodes</td><td>Japan, Japan, USA</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="winners-chemistry" class="page">
-      <div class="container">
-        <h2>Chemistry — Nobel Laureates</h2>
-        <table class="nobel-table">
-          <thead>
-            <tr>
-              <th>Name</th><th>Year</th><th>Contribution</th><th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>David Baker, Demis Hassabis, John Jumper</td><td>2024</td><td>Computational protein design and structure prediction</td><td>USA, UK</td></tr>
-            <tr><td>Moungi Bawendi, Louis Brus, Alexei Ekimov</td><td>2023</td><td>Discovery and synthesis of quantum dots</td><td>USA, USA, Russia</td></tr>
-            <tr><td>Carolyn Bertozzi, Morten Meldal, Barry Sharpless</td><td>2022</td><td>Click chemistry and bioorthogonal chemistry</td><td>USA, Denmark, USA</td></tr>
-            <tr><td>Benjamin List, David MacMillan</td><td>2021</td><td>Development of asymmetric organocatalysis</td><td>Germany, UK/USA</td></tr>
-            <tr><td>Emmanuelle Charpentier, Jennifer Doudna</td><td>2020</td><td>Development of CRISPR-Cas9 gene editing</td><td>France, USA</td></tr>
-            <tr><td>John Goodenough, Stanley Whittingham, Akira Yoshino</td><td>2019</td><td>Development of lithium-ion batteries</td><td>USA, UK/USA, Japan</td></tr>
-            <tr><td>Frances Arnold, George Smith, Gregory Winter</td><td>2018</td><td>Directed evolution of enzymes and phage display</td><td>USA, USA, UK</td></tr>
-            <tr><td>Jacques Dubochet, Joachim Frank, Richard Henderson</td><td>2017</td><td>Cryo-electron microscopy</td><td>Switzerland, USA, UK</td></tr>
-            <tr><td>Jean-Pierre Sauvage, Fraser Stoddart, Ben Feringa</td><td>2016</td><td>Design and synthesis of molecular machines</td><td>France, UK/USA, Netherlands</td></tr>
-            <tr><td>Tomas Lindahl, Paul Modrich, Aziz Sancar</td><td>2015</td><td>Mechanistic studies of DNA repair</td><td>Sweden, USA, Turkey/USA</td></tr>
-            <tr><td>Eric Betzig, Stefan Hell, William Moerner</td><td>2014</td><td>Super-resolved fluorescence microscopy</td><td>USA, Germany, USA</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="winners-medicine" class="page">
-      <div class="container">
-        <h2>Physiology or Medicine — Nobel Laureates</h2>
-        <table class="nobel-table">
-          <thead>
-            <tr>
-              <th>Name</th><th>Year</th><th>Contribution</th><th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Victor Ambros, Gary Ruvkun</td><td>2024</td><td>Discovery of microRNA and gene regulation</td><td>USA</td></tr>
-            <tr><td>Katalin Karikó, Drew Weissman</td><td>2023</td><td>mRNA vaccine development</td><td>Hungary/USA, USA</td></tr>
-            <tr><td>Svante Pääbo</td><td>2022</td><td>Discoveries concerning genomes of extinct hominins</td><td>Sweden</td></tr>
-            <tr><td>David Julius, Ardem Patapoutian</td><td>2021</td><td>Discoveries of receptors for temperature and touch</td><td>USA</td></tr>
-            <tr><td>Harvey Alter, Michael Houghton, Charles Rice</td><td>2020</td><td>Discovery of Hepatitis C virus</td><td>USA, UK, USA</td></tr>
-            <tr><td>William Kaelin Jr., Peter Ratcliffe, Gregg Semenza</td><td>2019</td><td>Discovery of how cells sense oxygen</td><td>USA, UK, USA</td></tr>
-            <tr><td>James Allison, Tasuku Honjo</td><td>2018</td><td>Cancer therapy by inhibition of negative immune regulation</td><td>USA, Japan</td></tr>
-            <tr><td>Jeffrey Hall, Michael Rosbash, Michael Young</td><td>2017</td><td>Discoveries of molecular mechanisms controlling circadian rhythm</td><td>USA</td></tr>
-            <tr><td>Yoshinori Ohsumi</td><td>2016</td><td>Discoveries of mechanisms for autophagy</td><td>Japan</td></tr>
-            <tr><td>William Campbell, Satoshi Ōmura, Youyou Tu</td><td>2015</td><td>Therapies against parasitic diseases</td><td>Ireland/USA, Japan, China</td></tr>
-            <tr><td>John O'Keefe, May-Britt Moser, Edvard Moser</td><td>2014</td><td>Discovery of cells that constitute positioning system in brain</td><td>USA/UK, Norway</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="winners-peace" class="page">
-      <div class="container">
-        <h2>Peace — Nobel Laureates</h2>
-        <table class="nobel-table">
-          <thead>
-            <tr>
-              <th>Name</th><th>Year</th><th>Contribution</th><th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Nihon Hidankyo</td><td>2024</td><td>Efforts to achieve a world free of nuclear weapons</td><td>Japan</td></tr>
-            <tr><td>Narges Mohammadi</td><td>2023</td><td>Fight against oppression of women in Iran</td><td>Iran</td></tr>
-            <tr><td>Ales Bialiatski, Memorial, Center for Civil Liberties</td><td>2022</td><td>Documenting war crimes and human rights abuses</td><td>Belarus, Russia, Ukraine</td></tr>
-            <tr><td>Maria Ressa, Dmitry Muratov</td><td>2021</td><td>Efforts to safeguard freedom of expression</td><td>Philippines, Russia</td></tr>
-            <tr><td>World Food Programme</td><td>2020</td><td>Efforts to combat hunger</td><td>UN Organization</td></tr>
-            <tr><td>Abiy Ahmed</td><td>2019</td><td>Peace and international cooperation</td><td>Ethiopia</td></tr>
-            <tr><td>Denis Mukwege, Nadia Murad</td><td>2018</td><td>Efforts to end sexual violence as weapon of war</td><td>DR Congo, Iraq</td></tr>
-            <tr><td>ICAN</td><td>2017</td><td>Work to ban nuclear weapons</td><td>International</td></tr>
-            <tr><td>Juan Manuel Santos</td><td>2016</td><td>Efforts to end Colombia's civil war</td><td>Colombia</td></tr>
-            <tr><td>National Dialogue Quartet</td><td>2015</td><td>Building democracy in Tunisia</td><td>Tunisia</td></tr>
-            <tr><td>Kailash Satyarthi, Malala Yousafzai</td><td>2014</td><td>Struggle against suppression of children</td><td>India, Pakistan</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="winners-literature" class="page">
-      <div class="container">
-        <h2>Literature — Nobel Laureates</h2>
-        <table class="nobel-table">
-          <thead>
-            <tr>
-              <th>Name</th><th>Year</th><th>Contribution</th><th>Country</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Han Kang</td><td>2024</td><td>Intense poetic prose confronting historical traumas</td><td>South Korea</td></tr>
-            <tr><td>Jon Fosse</td><td>2023</td><td>Innovative plays and prose giving voice to the unsayable</td><td>Norway</td></tr>
-            <tr><td>Annie Ernaux</td><td>2022</td><td>Courage and clinical acuity in uncovering personal memory</td><td>France</td></tr>
-            <tr><td>Abdulrazak Gurnah</td><td>2021</td><td>Uncompromising penetration of effects of colonialism</td><td>Tanzania/UK</td></tr>
-            <tr><td>Louise Glück</td><td>2020</td><td>Unmistakable poetic voice with austere beauty</td><td>USA</td></tr>
-            <tr><td>Peter Handke</td><td>2019</td><td>Influential work exploring periphery of human experience</td><td>Austria</td></tr>
-            <tr><td>Olga Tokarczuk</td><td>2018</td><td>Narrative imagination with encyclopedic passion</td><td>Poland</td></tr>
-            <tr><td>Kazuo Ishiguro</td><td>2017</td><td>Novels of great emotional force</td><td>UK</td></tr>
-            <tr><td>Bob Dylan</td><td>2016</td><td>Creating new poetic expressions within American song tradition</td><td>USA</td></tr>
-            <tr><td>Svetlana Alexievich</td><td>2015</td><td>Polyphonic writings, monument to suffering and courage</td><td>Belarus</td></tr>
-            <tr><td>Patrick Modiano</td><td>2014</td><td>Art of memory evoking human destinies</td><td>France</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- CATEGORIES (cards now point to per-category winners pages) -->
-    <section id="categories" class="page">
-      <ul class="categories-grid">
-        <li><a href="#winners-physics" class="cat-card"><img src="./resources/physics.png" alt="Physics"><h3>PHYSICS</h3></a></li>
-        <li><a href="#winners-chemistry" class="cat-card"><img src="./resources/chemistry.png" alt="Chemistry"><h3>CHEMISTRY</h3></a></li>
-        <li><a href="#winners-peace" class="cat-card"><img src="./resources/peace.png" alt="Peace"><h3>PEACE</h3></a></li>
-        <li><a href="#winners-literature" class="cat-card"><img src="./resources/literature.png" alt="Literature"><h3>LITERATURE</h3></a></li>
-        <li><a href="#winners-medicine" class="cat-card"><img src="./resources/medicine.png" alt="Physiology or Medicine"><h3>MEDICINE</h3></a></li>
-      </ul>
-    </section>
-
-    <!-- NEWSLETTER / FORM -->
-    <section id="newsletter" class="page">
-      <div class="container">
-        <h2>Newsletter</h2>
-
-        <form class="newsletter-form"
-              action="mailto:newsletter@example.com?subject=Newsletter%20Sign-up"
-              method="post"
-              enctype="text/plain"
-              autocomplete="on">
-
-          <label class="sr-only" for="first-name">First name</label>
-          <input id="first-name" name="First Name" type="text" placeholder="First name" required>
-
-          <label class="sr-only" for="last-name">Last name</label>
-          <input id="last-name" name="Last Name" type="text" placeholder="Last name" required>
-
-          <label class="sr-only" for="email">Email</label>
-          <input id="email" name="Email" type="email" placeholder="you@example.com" required>
-
-          <label class="sr-only" for="password">Create password</label>
-          <input id="password" name="Password" type="password" placeholder="Create password" required>
-
-          <label class="sr-only" for="interest">Area of interest</label>
-          <input id="interest"
-                 name="Area of Interest"
-                 class="input-datalist"
-                 type="text"
-                 list="interests"
-                 placeholder="Area of interest (start typing)…">
-          <datalist id="interests">
-            <option value="Physics"></option>
-            <option value="Chemistry"></option>
-            <option value="Physiology or Medicine"></option>
-            <option value="Peace"></option>
-            <option value="Literature"></option>
-          </datalist>
-
-          <button type="submit">Subscribe</button>
-        </form>
-
-        <h3>Featured articles</h3>
-        <div class="news-grid">
-          <article class="news-card">
-            <a href="https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/" target="_blank" rel="noopener">
-              <img src="./resources/madam-curie.png" alt="MADAM CURIE - A WOMAN OF SUPERLATIVES">
-              <h4>MADAM CURIE - A WOMAN OF SUPERLATIVES</h4>
-            </a>
+          <!-- Definition / lead article -->
+          <article class="definition-card">
+            <h3 class="kicker">What is a Nobel laureate?</h3>
+            <div class="prose">
+              <p>
+                A <strong>Nobel laureate</strong> is a person or organization
+                awarded a Nobel Prize for work that “has conferred the greatest
+                benefit to humankind.” The term <em>laureate</em> comes from the
+                laurel wreath used to crown victors in ancient Greece. Since
+                1901, prizes have been awarded in Physics, Chemistry, Physiology
+                or Medicine, Literature, and Peace; in 1968 the Prize in
+                Economic Sciences was added in Alfred Nobel’s memory.
+              </p>
+            </div>
           </article>
-          <article class="news-card">
-            <a href="https://www.nobelprize.org/prizes/physics/1921/summary/" target="_blank" rel="noopener">
-              <img src="./resources/albert.png" alt="ALBERT EINSTEIN - NOBEL PRIZE 1921">
-              <h4>ALBERT EINSTEIN - NOBEL PRIZE 1921</h4>
-            </a>
-          </article>
-          <article class="news-card">
-            <a href="https://www.nobelprize.org/prizes/peace/1979/summary/" target="_blank" rel="noopener">
-              <img src="./resources/mother-theresa.png" alt="MOTHER TERESA - NOBEL PEACE PRIZE 1979">
-              <h4>MOTHER TERESA - NOBEL PEACE PRIZE 1979</h4>
-            </a>
-          </article>
-          <article class="news-card">
-            <a href="https://www.nobelprize.org/prizes/peace/1993/summary/" target="_blank" rel="noopener">
-              <img src="./resources/mandela.png" alt="NELSON MANDELA - NOBEL PEACE PRIZE 1993">
-              <h4>NELSON MANDELA - NOBEL PEACE PRIZE 1993</h4>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section id="home" class="page">
-      <div class="hero"></div>
-      <aside class="quote">
-        <p>“Nothing in life is to be feared, it is only to be understood.”<br>— Marie Curie</p>
-      </aside>
-    </section>
-  </main>
-  <footer class="footer">
-    <p>
-      <a href="mailto:contact@nobelsample.org">Email us</a> ·
-      <a href="tel:+11234567890">+1 (123) 456-7890</a> ·
-      &copy; 2025 All Rights Reserved
-    </p>
-  </footer>
 
-</body>
+          <!-- Newspaper grid of mini-stories -->
+          <section class="newsboard">
+            <article class="story-card">
+              <h4 class="story-head">Albert Einstein</h4>
+              <p class="story-meta">Physics — 1921 (photoelectric effect)</p>
+              <div class="story-body">
+                <p>
+                  Explained how light can knock electrons free from
+                  metal—evidence that light acts like particles. The work
+                  powered quantum theory, even as his fame soared for
+                  relativity.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">Nelson Mandela</h4>
+              <p class="story-meta">Peace — 1993 (with F. W. de Klerk)</p>
+              <div class="story-body">
+                <p>
+                  After 27 years in prison, he negotiated an end to apartheid
+                  and became South Africa’s first democratically elected
+                  president, centering reconciliation over revenge.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">Mother Teresa</h4>
+              <p class="story-meta">Peace — 1979</p>
+              <div class="story-body">
+                <p>
+                  Founded the Missionaries of Charity and devoted her life to
+                  serving the poor and the dying, inspiring global volunteerism
+                  and a network of care homes.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">Marie Curie</h4>
+              <p class="story-meta">Physics — 1903 • Chemistry — 1911</p>
+              <div class="story-body">
+                <p>
+                  First woman to win a Nobel and the only person to win in two
+                  sciences— radioactivity pioneer who also organized mobile
+                  X-ray units in WWI.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">Linus Pauling</h4>
+              <p class="story-meta">
+                Chemistry — 1954 • Peace — 1962 (unshared)
+              </p>
+              <div class="story-body">
+                <p>
+                  Revealed the nature of the chemical bond, then led a global
+                  campaign against nuclear testing—one of only two people with
+                  two unshared Nobels.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">John Bardeen</h4>
+              <p class="story-meta">Physics — 1956 • 1972</p>
+              <div class="story-body">
+                <p>
+                  Co-invented the transistor and later co-created BCS theory of
+                  superconductivity—the only two-time Physics laureate, shaping
+                  the electronics era.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">Frederick Sanger</h4>
+              <p class="story-meta">Chemistry — 1958 • 1980</p>
+              <div class="story-body">
+                <p>
+                  Determined insulin’s structure and developed DNA sequencing
+                  methods—cornerstones of modern genomics.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">ICRC</h4>
+              <p class="story-meta">Peace — 1917 • 1944 • 1963</p>
+              <div class="story-body">
+                <p>
+                  The International Committee of the Red Cross was recognized
+                  three times for humanitarian work during and after wars—aid
+                  under the harshest conditions.
+                </p>
+              </div>
+            </article>
+
+            <article class="story-card">
+              <h4 class="story-head">UNHCR</h4>
+              <p class="story-meta">Peace — 1954 • 1981</p>
+              <div class="story-body">
+                <p>
+                  The UN refugee agency received two Peace Prizes for protecting
+                  and resettling displaced people worldwide across decades of
+                  crises.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <h3 class="winners-subtitle">Explore winners by category</h3>
+          <ul class="quick-links">
+            <li><a href="#winners-physics">Physics</a></li>
+            <li><a href="#winners-chemistry">Chemistry</a></li>
+            <li><a href="#winners-medicine">Physiology or Medicine</a></li>
+            <li><a href="#winners-peace">Peace</a></li>
+            <li><a href="#winners-literature">Literature</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="winners-physics" class="page">
+        <div class="container">
+          <h2>Physics — Nobel Laureates</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Geoffrey Hinton, John Hopfield</td>
+                <td>2024</td>
+                <td>
+                  Foundational discoveries in machine learning with artificial
+                  neural networks
+                </td>
+                <td>Canada/UK, USA</td>
+              </tr>
+              <tr>
+                <td>Pierre Agostini, Ferenc Krausz, Anne L'Huillier</td>
+                <td>2023</td>
+                <td>
+                  Experimental methods generating attosecond pulses of light
+                </td>
+                <td>USA, Germany, Sweden</td>
+              </tr>
+              <tr>
+                <td>Alain Aspect, John Clauser, Anton Zeilinger</td>
+                <td>2022</td>
+                <td>Experiments with entangled photons</td>
+                <td>France, USA, Austria</td>
+              </tr>
+              <tr>
+                <td>Syukuro Manabe, Klaus Hasselmann, Giorgio Parisi</td>
+                <td>2021</td>
+                <td>Physical modelling of Earth's climate</td>
+                <td>USA, Germany, Italy</td>
+              </tr>
+              <tr>
+                <td>Roger Penrose, Reinhard Genzel, Andrea Ghez</td>
+                <td>2020</td>
+                <td>Black hole formation and discovery</td>
+                <td>UK, Germany, USA</td>
+              </tr>
+              <tr>
+                <td>James Peebles, Michel Mayor, Didier Queloz</td>
+                <td>2019</td>
+                <td>Theoretical cosmology and exoplanet discovery</td>
+                <td>Canada/USA, Switzerland</td>
+              </tr>
+              <tr>
+                <td>Arthur Ashkin, Gérard Mourou, Donna Strickland</td>
+                <td>2018</td>
+                <td>Optical tweezers and chirped pulse amplification</td>
+                <td>USA, France, Canada</td>
+              </tr>
+              <tr>
+                <td>Rainer Weiss, Barry Barish, Kip Thorne</td>
+                <td>2017</td>
+                <td>LIGO detector and gravitational waves</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>David Thouless, Duncan Haldane, Michael Kosterlitz</td>
+                <td>2016</td>
+                <td>Topological phase transitions</td>
+                <td>UK, UK/USA, UK/USA</td>
+              </tr>
+              <tr>
+                <td>Takaaki Kajita, Arthur McDonald</td>
+                <td>2015</td>
+                <td>Discovery of neutrino oscillations</td>
+                <td>Japan, Canada</td>
+              </tr>
+              <tr>
+                <td>Isamu Akasaki, Hiroshi Amano, Shuji Nakamura</td>
+                <td>2014</td>
+                <td>Invention of blue light-emitting diodes</td>
+                <td>Japan, Japan, USA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="winners-chemistry" class="page">
+        <div class="container">
+          <h2>Chemistry — Nobel Laureates</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>David Baker, Demis Hassabis, John Jumper</td>
+                <td>2024</td>
+                <td>Computational protein design and structure prediction</td>
+                <td>USA, UK</td>
+              </tr>
+              <tr>
+                <td>Moungi Bawendi, Louis Brus, Alexei Ekimov</td>
+                <td>2023</td>
+                <td>Discovery and synthesis of quantum dots</td>
+                <td>USA, USA, Russia</td>
+              </tr>
+              <tr>
+                <td>Carolyn Bertozzi, Morten Meldal, Barry Sharpless</td>
+                <td>2022</td>
+                <td>Click chemistry and bioorthogonal chemistry</td>
+                <td>USA, Denmark, USA</td>
+              </tr>
+              <tr>
+                <td>Benjamin List, David MacMillan</td>
+                <td>2021</td>
+                <td>Development of asymmetric organocatalysis</td>
+                <td>Germany, UK/USA</td>
+              </tr>
+              <tr>
+                <td>Emmanuelle Charpentier, Jennifer Doudna</td>
+                <td>2020</td>
+                <td>Development of CRISPR-Cas9 gene editing</td>
+                <td>France, USA</td>
+              </tr>
+              <tr>
+                <td>John Goodenough, Stanley Whittingham, Akira Yoshino</td>
+                <td>2019</td>
+                <td>Development of lithium-ion batteries</td>
+                <td>USA, UK/USA, Japan</td>
+              </tr>
+              <tr>
+                <td>Frances Arnold, George Smith, Gregory Winter</td>
+                <td>2018</td>
+                <td>Directed evolution of enzymes and phage display</td>
+                <td>USA, USA, UK</td>
+              </tr>
+              <tr>
+                <td>Jacques Dubochet, Joachim Frank, Richard Henderson</td>
+                <td>2017</td>
+                <td>Cryo-electron microscopy</td>
+                <td>Switzerland, USA, UK</td>
+              </tr>
+              <tr>
+                <td>Jean-Pierre Sauvage, Fraser Stoddart, Ben Feringa</td>
+                <td>2016</td>
+                <td>Design and synthesis of molecular machines</td>
+                <td>France, UK/USA, Netherlands</td>
+              </tr>
+              <tr>
+                <td>Tomas Lindahl, Paul Modrich, Aziz Sancar</td>
+                <td>2015</td>
+                <td>Mechanistic studies of DNA repair</td>
+                <td>Sweden, USA, Turkey/USA</td>
+              </tr>
+              <tr>
+                <td>Eric Betzig, Stefan Hell, William Moerner</td>
+                <td>2014</td>
+                <td>Super-resolved fluorescence microscopy</td>
+                <td>USA, Germany, USA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="winners-medicine" class="page">
+        <div class="container">
+          <h2>Physiology or Medicine — Nobel Laureates</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Victor Ambros, Gary Ruvkun</td>
+                <td>2024</td>
+                <td>Discovery of microRNA and gene regulation</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Katalin Karikó, Drew Weissman</td>
+                <td>2023</td>
+                <td>mRNA vaccine development</td>
+                <td>Hungary/USA, USA</td>
+              </tr>
+              <tr>
+                <td>Svante Pääbo</td>
+                <td>2022</td>
+                <td>Discoveries concerning genomes of extinct hominins</td>
+                <td>Sweden</td>
+              </tr>
+              <tr>
+                <td>David Julius, Ardem Patapoutian</td>
+                <td>2021</td>
+                <td>Discoveries of receptors for temperature and touch</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Harvey Alter, Michael Houghton, Charles Rice</td>
+                <td>2020</td>
+                <td>Discovery of Hepatitis C virus</td>
+                <td>USA, UK, USA</td>
+              </tr>
+              <tr>
+                <td>William Kaelin Jr., Peter Ratcliffe, Gregg Semenza</td>
+                <td>2019</td>
+                <td>Discovery of how cells sense oxygen</td>
+                <td>USA, UK, USA</td>
+              </tr>
+              <tr>
+                <td>James Allison, Tasuku Honjo</td>
+                <td>2018</td>
+                <td>
+                  Cancer therapy by inhibition of negative immune regulation
+                </td>
+                <td>USA, Japan</td>
+              </tr>
+              <tr>
+                <td>Jeffrey Hall, Michael Rosbash, Michael Young</td>
+                <td>2017</td>
+                <td>
+                  Discoveries of molecular mechanisms controlling circadian
+                  rhythm
+                </td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Yoshinori Ohsumi</td>
+                <td>2016</td>
+                <td>Discoveries of mechanisms for autophagy</td>
+                <td>Japan</td>
+              </tr>
+              <tr>
+                <td>William Campbell, Satoshi Ōmura, Youyou Tu</td>
+                <td>2015</td>
+                <td>Therapies against parasitic diseases</td>
+                <td>Ireland/USA, Japan, China</td>
+              </tr>
+              <tr>
+                <td>John O'Keefe, May-Britt Moser, Edvard Moser</td>
+                <td>2014</td>
+                <td>
+                  Discovery of cells that constitute positioning system in brain
+                </td>
+                <td>USA/UK, Norway</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="winners-peace" class="page">
+        <div class="container">
+          <h2>Peace — Nobel Laureates</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nihon Hidankyo</td>
+                <td>2024</td>
+                <td>Efforts to achieve a world free of nuclear weapons</td>
+                <td>Japan</td>
+              </tr>
+              <tr>
+                <td>Narges Mohammadi</td>
+                <td>2023</td>
+                <td>Fight against oppression of women in Iran</td>
+                <td>Iran</td>
+              </tr>
+              <tr>
+                <td>Ales Bialiatski, Memorial, Center for Civil Liberties</td>
+                <td>2022</td>
+                <td>Documenting war crimes and human rights abuses</td>
+                <td>Belarus, Russia, Ukraine</td>
+              </tr>
+              <tr>
+                <td>Maria Ressa, Dmitry Muratov</td>
+                <td>2021</td>
+                <td>Efforts to safeguard freedom of expression</td>
+                <td>Philippines, Russia</td>
+              </tr>
+              <tr>
+                <td>World Food Programme</td>
+                <td>2020</td>
+                <td>Efforts to combat hunger</td>
+                <td>UN Organization</td>
+              </tr>
+              <tr>
+                <td>Abiy Ahmed</td>
+                <td>2019</td>
+                <td>Peace and international cooperation</td>
+                <td>Ethiopia</td>
+              </tr>
+              <tr>
+                <td>Denis Mukwege, Nadia Murad</td>
+                <td>2018</td>
+                <td>Efforts to end sexual violence as weapon of war</td>
+                <td>DR Congo, Iraq</td>
+              </tr>
+              <tr>
+                <td>ICAN</td>
+                <td>2017</td>
+                <td>Work to ban nuclear weapons</td>
+                <td>International</td>
+              </tr>
+              <tr>
+                <td>Juan Manuel Santos</td>
+                <td>2016</td>
+                <td>Efforts to end Colombia's civil war</td>
+                <td>Colombia</td>
+              </tr>
+              <tr>
+                <td>National Dialogue Quartet</td>
+                <td>2015</td>
+                <td>Building democracy in Tunisia</td>
+                <td>Tunisia</td>
+              </tr>
+              <tr>
+                <td>Kailash Satyarthi, Malala Yousafzai</td>
+                <td>2014</td>
+                <td>Struggle against suppression of children</td>
+                <td>India, Pakistan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="winners-literature" class="page">
+        <div class="container">
+          <h2>Literature — Nobel Laureates</h2>
+          <table class="nobel-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Contribution</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Han Kang</td>
+                <td>2024</td>
+                <td>Intense poetic prose confronting historical traumas</td>
+                <td>South Korea</td>
+              </tr>
+              <tr>
+                <td>Jon Fosse</td>
+                <td>2023</td>
+                <td>
+                  Innovative plays and prose giving voice to the unsayable
+                </td>
+                <td>Norway</td>
+              </tr>
+              <tr>
+                <td>Annie Ernaux</td>
+                <td>2022</td>
+                <td>
+                  Courage and clinical acuity in uncovering personal memory
+                </td>
+                <td>France</td>
+              </tr>
+              <tr>
+                <td>Abdulrazak Gurnah</td>
+                <td>2021</td>
+                <td>Uncompromising penetration of effects of colonialism</td>
+                <td>Tanzania/UK</td>
+              </tr>
+              <tr>
+                <td>Louise Glück</td>
+                <td>2020</td>
+                <td>Unmistakable poetic voice with austere beauty</td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Peter Handke</td>
+                <td>2019</td>
+                <td>
+                  Influential work exploring periphery of human experience
+                </td>
+                <td>Austria</td>
+              </tr>
+              <tr>
+                <td>Olga Tokarczuk</td>
+                <td>2018</td>
+                <td>Narrative imagination with encyclopedic passion</td>
+                <td>Poland</td>
+              </tr>
+              <tr>
+                <td>Kazuo Ishiguro</td>
+                <td>2017</td>
+                <td>Novels of great emotional force</td>
+                <td>UK</td>
+              </tr>
+              <tr>
+                <td>Bob Dylan</td>
+                <td>2016</td>
+                <td>
+                  Creating new poetic expressions within American song tradition
+                </td>
+                <td>USA</td>
+              </tr>
+              <tr>
+                <td>Svetlana Alexievich</td>
+                <td>2015</td>
+                <td>Polyphonic writings, monument to suffering and courage</td>
+                <td>Belarus</td>
+              </tr>
+              <tr>
+                <td>Patrick Modiano</td>
+                <td>2014</td>
+                <td>Art of memory evoking human destinies</td>
+                <td>France</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CATEGORIES (cards now point to per-category winners pages) -->
+      <section id="categories" class="page">
+        <ul class="categories-grid">
+          <li>
+            <a href="#winners-physics" class="cat-card"
+              ><img src="./resources/physics.png" alt="Physics" />
+              <h3>PHYSICS</h3></a
+            >
+          </li>
+          <li>
+            <a href="#winners-chemistry" class="cat-card"
+              ><img src="./resources/chemistry.png" alt="Chemistry" />
+              <h3>CHEMISTRY</h3></a
+            >
+          </li>
+          <li>
+            <a href="#winners-peace" class="cat-card"
+              ><img src="./resources/peace.png" alt="Peace" />
+              <h3>PEACE</h3></a
+            >
+          </li>
+          <li>
+            <a href="#winners-literature" class="cat-card"
+              ><img src="./resources/literature.png" alt="Literature" />
+              <h3>LITERATURE</h3></a
+            >
+          </li>
+          <li>
+            <a href="#winners-medicine" class="cat-card"
+              ><img
+                src="./resources/medicine.png"
+                alt="Physiology or Medicine"
+              />
+              <h3>MEDICINE</h3></a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- NEWSLETTER / FORM -->
+      <section id="newsletter" class="page">
+        <div class="container">
+          <h2>Newsletter</h2>
+          <audio id="subscribeSound" preload="auto">
+            <source src="./resources/ding.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <form
+            class="newsletter-form"
+            action="mailto:newsletter@example.com?subject=Newsletter%20Sign-up"
+            method="post"
+            enctype="text/plain"
+            autocomplete="on"
+            id="newsletterForm"
+          >
+            <label class="sr-only" for="first-name">First name</label>
+            <input
+              id="first-name"
+              name="First Name"
+              type="text"
+              placeholder="First name"
+              required
+            />
+
+            <label class="sr-only" for="last-name">Last name</label>
+            <input
+              id="last-name"
+              name="Last Name"
+              type="text"
+              placeholder="Last name"
+              required
+            />
+
+            <label class="sr-only" for="email">Email</label>
+            <input
+              id="email"
+              name="Email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label class="sr-only" for="password">Create password</label>
+            <input
+              id="password"
+              name="Password"
+              type="password"
+              placeholder="Create password"
+              required
+            />
+
+            <label class="sr-only" for="interest">Area of interest</label>
+            <input
+              id="interest"
+              name="Area of Interest"
+              class="input-datalist"
+              type="text"
+              list="interests"
+              placeholder="Area of interest (start typing)…"
+            />
+            <datalist id="interests">
+              <option value="Physics"></option>
+              <option value="Chemistry"></option>
+              <option value="Physiology or Medicine"></option>
+              <option value="Peace"></option>
+              <option value="Literature"></option>
+            </datalist>
+
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <h3>Featured articles</h3>
+          <div class="news-grid">
+            <article class="news-card">
+              <a
+                href="https://www.nobelprize.org/prizes/physics/1903/marie-curie/facts/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./resources/madam-curie.png"
+                  alt="MADAM CURIE - A WOMAN OF SUPERLATIVES"
+                />
+                <h4>MADAM CURIE - A WOMAN OF SUPERLATIVES</h4>
+              </a>
+            </article>
+            <article class="news-card">
+              <a
+                href="https://www.nobelprize.org/prizes/physics/1921/summary/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./resources/albert.png"
+                  alt="ALBERT EINSTEIN - NOBEL PRIZE 1921"
+                />
+                <h4>ALBERT EINSTEIN - NOBEL PRIZE 1921</h4>
+              </a>
+            </article>
+            <article class="news-card">
+              <a
+                href="https://www.nobelprize.org/prizes/peace/1979/summary/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./resources/mother-theresa.png"
+                  alt="MOTHER TERESA - NOBEL PEACE PRIZE 1979"
+                />
+                <h4>MOTHER TERESA - NOBEL PEACE PRIZE 1979</h4>
+              </a>
+            </article>
+            <article class="news-card">
+              <a
+                href="https://www.nobelprize.org/prizes/peace/1993/summary/"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="./resources/mandela.png"
+                  alt="NELSON MANDELA - NOBEL PEACE PRIZE 1993"
+                />
+                <h4>NELSON MANDELA - NOBEL PEACE PRIZE 1993</h4>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="home" class="page">
+        <div class="hero"></div>
+        <aside class="quote">
+          <p>
+            “Nothing in life is to be feared, it is only to be understood.”<br />—
+            Marie Curie
+          </p>
+        </aside>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <a href="mailto:contact@nobelsample.org">Email us</a> ·
+        <a href="tel:+11234567890">+1 (123) 456-7890</a> · &copy; 2025 All
+        Rights Reserved
+      </p>
+    </footer>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletterForm');
+    const audio = document.getElementById('subscribeSound');
+    
+    form.addEventListener('submit', function(e) {
+      audio.play().catch(function(error) {
+        console.log('Audio playback failed:', error);
+      });
+    });
+  });
+</script>
+  </body>
 </html>
